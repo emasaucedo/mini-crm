@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 
 export const getDashboardController = async (req: Request, res: Response) => {
-  res.json({ summary: "Dashboard data placeholder" });
+  res.json({ summary: 'Dashboard data placeholder' });
 };

@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class Contact extends Model {
   public id!: number;
@@ -21,7 +21,7 @@ export function initContact(sequelize: Sequelize) {
       phone: { type: DataTypes.STRING, allowNull: true },
       companyId: { type: DataTypes.INTEGER.UNSIGNED, allowNull: true },
     },
-    { sequelize, tableName: "contacts" },
+    { sequelize, tableName: 'contacts' },
   );
 
   return Contact;

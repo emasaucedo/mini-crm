@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class Company extends Model {
   public id!: number;
@@ -17,7 +17,7 @@ export function initCompany(sequelize: Sequelize) {
       name: { type: DataTypes.STRING, allowNull: false },
       website: { type: DataTypes.STRING, allowNull: true },
     },
-    { sequelize, tableName: "companies" },
+    { sequelize, tableName: 'companies' },
   );
 
   return Company;

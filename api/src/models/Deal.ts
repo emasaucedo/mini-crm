@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class Deal extends Model {
   public id!: number;
@@ -20,10 +20,10 @@ export function initDeal(sequelize: Sequelize) {
       status: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: "open",
+        defaultValue: 'open',
       },
     },
-    { sequelize, tableName: "deals" },
+    { sequelize, tableName: 'deals' },
   );
 
   return Deal;

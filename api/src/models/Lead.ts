@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class Lead extends Model {
   public id!: number;
@@ -17,9 +17,9 @@ export function initLead(sequelize: Sequelize) {
       },
       name: { type: DataTypes.STRING, allowNull: false },
       email: { type: DataTypes.STRING, allowNull: true },
-      status: { type: DataTypes.STRING, allowNull: false, defaultValue: "new" },
+      status: { type: DataTypes.STRING, allowNull: false, defaultValue: 'new' },
     },
-    { sequelize, tableName: "leads" },
+    { sequelize, tableName: 'leads' },
   );
 
   return Lead;

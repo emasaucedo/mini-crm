@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class Task extends Model {
   public id!: number;
@@ -21,7 +21,7 @@ export function initTask(sequelize: Sequelize) {
         defaultValue: false,
       },
     },
-    { sequelize, tableName: "tasks" },
+    { sequelize, tableName: 'tasks' },
   );
 
   return Task;

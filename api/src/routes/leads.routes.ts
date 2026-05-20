@@ -1,6 +1,6 @@
-import { Router } from "express";
-import { getLeadsController } from "../controllers/leads.controller";
+import { Router } from 'express';
+import { getLeadsController } from '../controllers/leads.controller';
 
 const router = Router();
-router.get("/", getLeadsController);
+router.get('/', getLeadsController);
 export default router;

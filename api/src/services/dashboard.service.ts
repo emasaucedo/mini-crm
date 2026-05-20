@@ -1,5 +1,3 @@
-import { sequelize } from "../models";
-
 export const getDashboard = async () => {
   // En desarrollo devolvemos datos de ejemplo. Se puede reemplazar
   // por consultas reales usando los modelos y sequelize.

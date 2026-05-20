@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class User extends Model {
   public id!: number;
@@ -19,7 +19,7 @@ export function initUser(sequelize: Sequelize) {
       email: { type: DataTypes.STRING, allowNull: false, unique: true },
       password: { type: DataTypes.STRING, allowNull: false },
     },
-    { sequelize, tableName: "users" },
+    { sequelize, tableName: 'users' },
   );
 
   return User;

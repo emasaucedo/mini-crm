@@ -1,22 +1,23 @@
-import express, { Request, Response, NextFunction } from "express";
-import cors from "cors";
-import routes from "./routes/index";
-import { env } from "./config/env";
-import { sequelize } from "./config/db";
+import express, { Request, Response, NextFunction } from 'express';
+import cors from 'cors';
+import routes from './routes/index';
+import { env } from './config/env';
+import './models';
+import { sequelize } from './config/db';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/api", routes);
+app.use('/api', routes);
 
-app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Mini CRM API is running" });
+app.get('/', (req: Request, res: Response) => {
+  res.json({ message: 'Mini CRM API is running' });
 });
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
   console.error(err);
-  res.status(500).json({ error: err.message || "Internal server error" });
+  res.status(500).json({ error: err.message || 'Internal server error' });
 });
 
 const start = async () => {
@@ -27,7 +28,7 @@ const start = async () => {
       console.log(`API running on http://localhost:${env.PORT}`);
     });
   } catch (error) {
-    console.error("Unable to start server:", error);
+    console.error('Unable to start server:', error);
     process.exit(1);
   }
 };

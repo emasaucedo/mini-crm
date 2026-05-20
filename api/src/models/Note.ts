@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class Note extends Model {
   public id!: number;
@@ -15,7 +15,7 @@ export function initNote(sequelize: Sequelize) {
       },
       content: { type: DataTypes.TEXT, allowNull: false },
     },
-    { sequelize, tableName: "notes" },
+    { sequelize, tableName: 'notes' },
   );
 
   return Note;
