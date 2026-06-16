@@ -1,7 +1,6 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "type": "module",
   "main": "dist/app.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",

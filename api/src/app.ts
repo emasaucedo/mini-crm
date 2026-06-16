@@ -23,7 +23,7 @@ app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
 const start = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync();
+    await sequelize.sync({ force: true });
     app.listen(env.PORT, () => {
       console.log(`API running on http://localhost:${env.PORT}`);
     });

@@ -16,6 +16,6 @@ export const login = async (email: string, password: string) => {
 };
 
 export const register = async (name: string, email: string, password: string) => {
-  const hashedPassword = await bcrypt.hash(password, 10);
-  return { id: 1, name, email, password: hashedPassword };
+  const password_hash = await bcrypt.hash(password, 10);
+  return { id: 1, name, email, password_hash };
 };
